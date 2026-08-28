@@ -32,21 +32,4 @@ public class Base62Utils {
 	}
 	
 	
-	public String encodeUrl2(String originalUrl ) {
-		
-		StringBuilder stringBuilder = new StringBuilder();
-		int number = originalUrl.length() *10;
-		
-		while(number > 0) {
-			
-			stringBuilder.append(originalUrl.charAt( (int) (number % originalUrl.length() ) ));
-			number = number / originalUrl.length();
-			
-		}
-		return stringBuilder.reverse().toString();
-		
-	}
-			
-	
-	
 }

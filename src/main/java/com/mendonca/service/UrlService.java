@@ -25,10 +25,6 @@ public class UrlService {
 	 
 	  String encodedUrl=base62Utils.encodeUrl(originalUrl);
 	  
-	  System.out.println(originalUrl.length());
-	  System.out.println(encodedUrl.length());
-	  
-	  
 	  Optional<UrlElement> UrlElementOptional =urlElementRepository.findById(encodedUrl);
 	  
 	  if(UrlElementOptional.isPresent()) { 
@@ -70,7 +66,5 @@ public class UrlService {
 		
 	}
 
-	
-	
 	
 }

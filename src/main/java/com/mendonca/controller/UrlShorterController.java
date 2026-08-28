@@ -27,7 +27,7 @@ public class UrlShorterController {
 		
 	
 	@RequestMapping(method = RequestMethod.GET,path = "/url/{address}")
-	public ResponseEntity<?> getShorterUrl(@PathVariable String address) {
+	public synchronized ResponseEntity<?>  getShorterUrl(@PathVariable String address) {
 		
 		 UrlElement urlElement = urlService.generateShortUrl(address);
 		 String body = urlService.getClickableLink(urlElement);
@@ -36,7 +36,7 @@ public class UrlShorterController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET,path = "/navigate/{address}")
-	public ResponseEntity<?> navigate(@PathVariable String address,Model model) {
+	public synchronized ResponseEntity<?> navigate(@PathVariable String address,Model model) {
 		
 		 UrlElement urlElement  =urlService.getUrlElement(address);
 		 String urlPath =urlService.completeUrl(urlElement);

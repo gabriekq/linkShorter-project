@@ -47,9 +47,10 @@
 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+					
 		</dependency>
-
-
+		
+	
 		<!-- Source: https://mvnrepository.com/artifact/io.seruco.encoding/base62 -->
 		<dependency>
 			<groupId>io.seruco.encoding</groupId>
