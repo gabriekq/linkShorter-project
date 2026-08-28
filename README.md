@@ -19,7 +19,7 @@ O projeto Atualmente conta com duas APIs.
 
 O projeto foi estruturado utilizando a estrutura MVC (Model, View, Controler).
 
-![plot](.\documents\folders.jpg)
+![plot](./documents/folders.jpg)
 
 O qual a logica de negocio e orquestrada pela classe de serviço  **UrlService.java**  que interage com a classe  **Base62Utils.java**  para gerar a string codificada e com o
 **UrlElementRepository.java**  que faz a gravacao e a leitura dos dados no banco de dados relacional utilizando postgress.
